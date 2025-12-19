@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahadh MizhVer — Indian author</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Spectral:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "#website",
+              "name": "Fahadh MizhVer"
+            },
+            {
+              "@type": "WebPage",
+              "@id": "#webpage",
+              "name": "Fahadh MizhVer — Indian author",
+              "inLanguage": "en",
+              "isPartOf": { "@id": "#website" },
+              "mainEntity": { "@id": "#person" }
+            },
+            {
+              "@type": "Person",
+              "@id": "#person",
+              "name": "Fahadh MizhVer",
+              "alternateName": [
+                "Mohammed Fahadh Khambrath",
+                "F. MizhVer"
+              ],
+              "description": "Mohammed Fahadh Khambrath, known professionally as Fahadh MizhVer, is an Indian English-language author recognized for his work in the psychological thriller and dark romance genres. Born on May 31, 2008, in Kerala, India, MizhVer published his debut book, an ancient fiction love story titled Eleanor of the Whitecliff Manor from the series The Aphrodite Amour-Writs, at the age of seventeen. He writes in the crime and psychological thriller genres, as well as love and dark romance. Fahadh MizhVer also founded The Khambrath Group & Co., an international trade intermediary specializing in geopolitical arbitrage.",
+              "birthDate": "2008-05-31",
+              "birthPlace": {
+                "@type": "Place",
+                "name": "Kerala, India",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressRegion": "Kerala",
+                  "addressCountry": "IN"
+                }
+              },
+              "nationality": {
+                "@type": "Country",
+                "name": "India"
+              },
+              "knowsLanguage": ["English"],
+              "email": "mailto:fahadhmizhu@gmail.com",
+              "image": { "@id": "#portrait" },
+              "genre": [
+                "Psychological thriller",
+                "Dark romance",
+                "Crime fiction",
+                "Romance"
+              ],
+              "knowsAbout": [
+                "Psychological thrillers",
+                "Dark romance",
+                "Crime fiction",
+                "Romance writing",
+                "Geopolitical arbitrage",
+                "International trade"
+              ],
+              "hasOccupation": [
+                {
+                  "@type": "Occupation",
+                  "name": "Author"
+                },
+                {
+                  "@type": "Occupation",
+                  "name": "Founder"
+                }
+              ],
+              "affiliation": {
+                "@id": "#khambrath-group"
+              },
+              "workExample": [
+                { "@id": "#book-eleanor" }
+              ],
+              "mainEntityOfPage": { "@id": "#webpage" },
+              "potentialAction": {
+                "@type": "CommunicateAction",
+                "name": "Email Fahadh MizhVer",
+                "target": "mailto:fahadhmizhu@gmail.com"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "#portrait",
+              "url": "https://i.ibb.co/RT4zm3Mh/IMG-7580.png",
+              "caption": "Fahadh MizhVer - Author Portrait",
+              "representativeOfPage": true
+            },
+            {
+              "@type": "Organization",
+              "@id": "#khambrath-group",
+              "name": "The Khambrath Group & Co.",
+              "description": "An international trade intermediary specializing in geopolitical arbitrage.",
+              "founder": { "@id": "#person" }
+            },
+            {
+              "@type": "CreativeWorkSeries",
+              "@id": "#series-aphrodite-amour-writs",
+              "name": "The Aphrodite Amour-Writs"
+            },
+            {
+              "@type": "Book",
+              "@id": "#book-eleanor",
+              "name": "Eleanor of the Whitecliff Manor",
+              "author": { "@id": "#person" },
+              "bookSeries": { "@id": "#series-aphrodite-amour-writs" },
+              "image": { "@id": "#cover-eleanor" },
+              "inLanguage": "en"
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "#cover-eleanor",
+              "url": "https://i.ibb.co/JjQBcGqJ/phonto.jpg",
+              "caption": "Cover image for Eleanor of the Whitecliff Manor"
+            }
+          ]
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --parchment: #f8f6f1;
+            --ink: #1a1a18;
+            --aged: #3d3b36;
+            --faded: #7a766d;
+            --line: #d4d0c7;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Spectral', serif;
+            background-color: var(--parchment);
+            color: var(--ink);
+            font-weight: 300;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--ink);
+            color: var(--parchment);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--parchment);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Spectral', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--parchment);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--parchment);
+            transition: width 0.4s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1px;
+            height: 0;
+            background: var(--line);
+            animation: lineGrow 1.5s ease 0.5s forwards;
+        }
+
+        @keyframes lineGrow {
+            to { height: 200px; }
+        }
+
+        .hero-content {
+            opacity: 0;
+            animation: fadeUp 1s ease 1s forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                transform: translateY(20px);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--faded);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--faded);
+            opacity: 0;
+            animation: fadeIn 1s ease 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Sections */
+        section {
+            padding: 8rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--faded);
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .about-image {
+            aspect-ratio: 1/1;
+            background: var(--line);
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .about-image img {
+            border-radius: 16px;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--ink);
+            border-radius: 16px;
+            transform: translate(20px, 20px);
+            transition: transform 0.6s ease;
+        }
+
+        .about-image:hover::before {
+            transform: translate(10px, 10px);
+        }
+
+        .about-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .about-text p {
+            color: var(--aged);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Works Section */
+        .works {
+            padding: 10rem 4rem;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .work-item {
+            cursor: pointer;
+        }
+
+        .work-cover {
+            aspect-ratio: 2/3;
+            background: var(--ink);
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            transition: transform 0.6s ease;
+        }
+
+        .work-cover img {
+            border-radius: 16px;
+        }
+
+        .work-cover::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--parchment);
+            border-radius: 14px;
+            opacity: 0.1;
+            margin: 1rem;
+        }
+
+        .work-item:hover .work-cover {
+            transform: translateY(-8px);
+        }
+
+        .work-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 0.3rem;
+        }
+
+        .work-year {
+            font-size: 0.8rem;
+            color: var(--faded);
+            letter-spacing: 0.1em;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 800px;
+            line-height: 1.6;
+            color: var(--aged);
+        }
+
+        .quote-author {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--faded);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 10rem 4rem;
+        }
+
+        .contact h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .contact p {
+            color: var(--faded);
+            margin-bottom: 3rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 0.3rem;
+            transition: border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--faded);
+            border-color: var(--faded);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--line);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--faded);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: var(--faded);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--ink);
+        }
+
+        /* Animations on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 5rem 2rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">F. MizhVer</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FAHADH MIZHVER</h1>
+            <p class="subtitle">An Indian Author</p>
+        </div>
+        <span class="scroll-indicator">Scroll</span>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-image reveal">
+            <img src="https://i.ibb.co/RT4zm3Mh/IMG-7580.png" alt="Fahadh MizhVer - Author Portrait" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="about-text reveal">
+            <span class="section-label">About</span>
+            <h2>Syllables wrought in the crucible of hush, their quintessence tempered by an eternal vigil.</h2>
+            <p>Mohammed Fahadh Khambrath, known professionally as Fahadh MizhVer, is an Indian English-language author recognized for his work in the psychological thriller and dark romance genres.</p>
+            <p>Born on May 31, 2008, in Kerala, India, MizhVer published his debut book, an ancient fiction love story titled Eleanor of the Whitecliff Manor from the series The Aphrodite Amour-Writs, at the age of seventeen. He writes in the crime and psychological thriller genres, as well as love and dark romance.</p>
+            <p>Fahadh MizhVer also founded The Khambrath Group & Co., an international trade intermediary specializing in geopolitical arbitrage.</p>
+        </div>
+    </section>
+
+    <section class="works" id="works">
+        <span class="section-label reveal">Selected Works</span>
+        <div class="works-grid">
+            <div class="work-item reveal">
+                <div class="work-cover">
+                    <img src="https://i.ibb.co/JjQBcGqJ/phonto.jpg" alt="Meditations on Stone" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                </div>
+                <h3 class="work-title">Eleanor of the Whitecliff Manor</h3>
+                <span class="work-year">The Aphrodite Amour-Writs</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="reveal">
+            <blockquote class="quote">"We write not to be understood, but to understand—to give form to the formless and voice to the silent depths within."</blockquote>
+            <p class="quote-author">— From 'Meditations on Stone'</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="reveal">
+            <span class="section-label">Correspondence</span>
+            <h2>Let us converse</h2>
+            <p>For inquiries regarding manuscripts, speaking engagements, or matters of the written word.</p>
+            <a href="mailto:fahadhmizhu@gmail.com" class="contact-link">fahadhmizhu@gmail.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2025 Fahadh MizhVer</span>
+        <div class="social-links">
+            <a href="#">Letters</a>
+            <a href="#">Archive</a>
+            <a href="#">Readings</a>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal on scroll animation
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 150;
+                
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Subtle parallax on hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.2}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight) * 1.2;
+            }
+        });
+    </script>
+</body>
+</html>
