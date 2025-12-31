@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="U1QyYHlgSBSNnBxBeggcG9GkUS2ke_ElFdSsy-AMhlA" />
+    <title>Faz | Author</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Structured data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "#faz",
+          "name": "Mohammed Fahadh Khambrath",
+          "alternateName": ["Faz", "Fahadh MizhVer"],
+          "givenName": "Mohammed Fahadh",
+          "familyName": "Khambrath",
+          "description": "Indian author of classical history and historically inspired fiction, including historical romance, crime, and psychological thrillers.",
+          "birthDate": "2008-05-31",
+          "birthPlace": {
+            "@type": "Place",
+            "name": "Kerala, India"
+          },
+          "nationality": "Indian",
+          "jobTitle": ["Writer", "Author"],
+          "image": "https://i.ibb.co/ym5jGy48/IMG-7628.jpg",
+          "email": "mailto:mizhver.khambrathgroup@gmail.com",
+          "sameAs": [
+            "https://www.instagram.com/m1zver?igsh=MXhqeHI3NzIxZTJzYw%3D%3D&utm_source=qr"
+          ],
+          "works": { "@id": "#korvian" },
+          "affiliation": { "@id": "#khambrath-group" },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "inquiries",
+              "email": "mailto:mizhver.khambrathgroup@gmail.com"
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "#khambrath-group",
+          "name": "The Khambrath Group & Co.",
+          "description": "International trade intermediary described as focused on geopolitical arbitrage.",
+          "founder": { "@id": "#faz" }
+        },
+        {
+          "@type": "CreativeWorkSeries",
+          "@id": "#aphrodite-amour-writs",
+          "name": "The Aphrodite Amour-Writs"
+        },
+        {
+          "@type": "Book",
+          "@id": "#korvian",
+          "name": "Korvian: A Novel of Ancient Love and Impossible Choices",
+          "description": "A historical fiction novel reimagining the Maddest love story of Stratonice and Antiochus I, focusing on Queen Sevara's untold emotions in ancient Italy.",
+          "author": { "@id": "#faz" },
+          "datePublished": "2025",
+          "genre": ["Historical fiction", "Historical romance"],
+          "inLanguage": "en",
+          "image": "https://i.ibb.co/SwpCvgcp/phonto.jpg",
+          "isPartOf": { "@id": "#aphrodite-amour-writs" },
+          "keywords": [
+            "ancient world",
+            "classical history",
+            "Greco-Roman",
+            "romance",
+            "psychological tension"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "#website",
+          "name": "Faz | Author",
+          "inLanguage": "en",
+          "about": { "@id": "#faz" },
+          "publisher": { "@id": "#faz" }
+        },
+        {
+          "@type": ["WebPage", "ProfilePage"],
+          "@id": "#webpage",
+          "name": "Faz | Author",
+          "inLanguage": "en",
+          "isPartOf": { "@id": "#website" },
+          "about": [{ "@id": "#faz" }, { "@id": "#korvian" }],
+          "mainEntity": { "@id": "#faz" }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --paper: #fafaf9;
+            --stone: #78716c;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+        }
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .text-stone {
+            color: var(--stone);
+        }
+        a, button {
+            transition: opacity 0.2s ease;
+        }
+        a:hover, button:hover {
+            opacity: 0.7;
+        }
+
+        /* Make anchor navigation land correctly below the fixed navbar */
+        [id] {
+            scroll-margin-top: 96px;
+        }
+        @media (min-width: 1024px) {
+            [id] {
+                scroll-margin-top: 112px;
+            }
+        }
+
+        /* Wikipedia-like accents for the About section */
+        .wiki-box {
+            border-color: #a2a9b1;
+            background: #f8f9fa;
+        }
+        .wiki-link {
+            color: #3366cc;
+        }
+        .wiki-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Prevent hover-dimming on clickable images */
+        a.no-dim:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-[#fafaf9]/90 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 lg:py-5 flex justify-between items-center">
+            <a href="#" class="font-serif text-xl font-medium tracking-tight">FAZ</a>
+            <div class="flex gap-6 sm:gap-8 text-sm font-light tracking-wide">
+                <a href="#books" class="text-stone">Books</a>
+                <a href="#about" class="text-stone">About</a>
+                <a href="#contact" class="text-stone">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="min-h-screen flex items-center justify-center px-6 lg:px-10">
+        <div class="text-center max-w-3xl">
+            <p class="text-stone text-sm tracking-[0.3em] uppercase mb-6">Author of Classical and Historical Romance</p>
+            <h1 class="font-serif text-6xl md:text-7xl lg:text-8xl font-medium leading-tight mb-8">Faz</h1>
+            <p class="text-stone font-light text-lg lg:text-xl leading-relaxed mb-10 max-w-prose mx-auto">
+                Historically inspired fiction rooted in the ancient world, where intimacy meets power.
+                Romance, intrigue, and psychological tension.
+            </p>
+            <a href="#books" class="inline-block border border-[#1a1a1a] px-8 py-3 text-sm tracking-wide">
+                Explore Works
+            </a>
+        </div>
+    </header>
+
+    <!-- Books -->
+    <section id="books" class="py-24 lg:py-32 px-6 lg:px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 lg:mb-20">
+                <p class="text-stone text-sm tracking-[0.3em] uppercase mb-4">Bibliography</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-medium">Published Works</h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <div class="justify-self-center lg:justify-self-end w-full max-w-sm lg:max-w-md">
+                    <a href="https://ibb.co/v48nzWh8" target="_blank" rel="noopener noreferrer" class="no-dim block bg-[#e7e5e4] aspect-[2/3] overflow-hidden">
+                        <img src="https://i.ibb.co/SwpCvgcp/phonto.jpg" alt="Korvian book cover" class="w-full h-full object-cover" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="text-center lg:text-left">
+                    <p class="text-stone text-sm mb-2">2025</p>
+                    <h3 class="font-serif text-3xl lg:text-4xl font-medium leading-tight mb-4">
+                        Korvian: A Novel of Ancient Love and Impossible Choices
+                    </h3>
+                    <p class="text-stone font-light text-sm lg:text-base leading-relaxed">
+                        A historical fiction novel reimagining the Maddest love story of Stratonice and Antiochus I, focusing on Queen Sevara's untold emotions in ancient Italy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 lg:py-32 px-6 lg:px-10 bg-[#f5f5f4]">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <p class="text-stone text-sm tracking-[0.3em] uppercase mb-4">About</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-medium mb-3">Mohammed Fahadh Khambrath</h2>
+                <p class="text-stone text-sm font-light mb-8">
+                    Known professionally as <span class="text-[#1a1a1a] font-normal">Fahadh MizhVer</span> or simply <span class="text-[#1a1a1a] font-normal">Faz</span>.
+                </p>
+
+                <!-- Portrait (relocated under the name) -->
+                <figure class="mb-10 max-w-sm sm:max-w-md">
+                    <a href="https://ibb.co/WNFJqyVc" target="_blank" rel="noopener noreferrer" class="no-dim block bg-[#e7e5e4] aspect-[4/5] overflow-hidden">
+                        <img src="https://i.ibb.co/ym5jGy48/IMG-7628.jpg" alt="Faz portrait" class="w-full h-full object-cover" loading="lazy">
+                    </a>
+                    <figcaption class="mt-3 text-xs text-stone font-light leading-snug text-center">
+                        Mohammed Fahadh Khambrath (Faz), pictured in a portrait.
+                    </figcaption>
+                </figure>
+
+                <div class="lg:flex lg:items-start lg:gap-10">
+                    <!-- Contents (Wikipedia-style TOC) -->
+                    <aside class="wiki-box border p-4 md:p-5 lg:w-[320px] lg:shrink-0 lg:sticky lg:top-28">
+                        <div class="text-center">
+                            <p class="text-sm font-medium">Contents</p>
+                            <div class="mt-2 h-px bg-[#c8ccd1]"></div>
+                        </div>
+                        <ol class="mt-3 grid md:grid-cols-2 lg:grid-cols-1 gap-x-10 gap-y-1 list-decimal pl-6 text-sm font-light">
+                            <li><a class="wiki-link" href="#overview">Overview</a></li>
+                            <li><a class="wiki-link" href="#early-life">Early life and background</a></li>
+                            <li><a class="wiki-link" href="#writing">Writing</a></li>
+                            <li><a class="wiki-link" href="#entrepreneurship">Entrepreneurship</a></li>
+                            <li><a class="wiki-link" href="#personal-life">Personal life</a></li>
+                            <li><a class="wiki-link" href="#family">Family</a></li>
+                            <li><a class="wiki-link" href="#writing-focus">Writing focus</a></li>
+                        </ol>
+                    </aside>
+
+                    <div class="mt-10 lg:mt-0 lg:flex-1">
+                        <!-- Lead (Wikipedia-style) -->
+                        <div id="overview" class="space-y-5 text-stone font-light leading-relaxed">
+                            <p>
+                                Mohammed Fahadh Khambrath, known professionally as Fahadh MizhVer or simply "Faz", is an Indian author of classical history and historically inspired fiction. He publishes his works under the name "Faz", focusing on the social, cultural, and lived experiences of ancient Rome and the Greco-Roman world.
+                            </p>
+                            <p>
+                                Born on May 31, 2008, in Kerala, India, he published his debut book, an ancient-fiction love story titled <span class="text-[#1a1a1a] font-normal">Korvian</span> from the series <span class="text-[#1a1a1a] font-normal">The Aphrodite Amour-Writs</span>, at the age of seventeen.
+                            </p>
+                            <p>
+                                In addition to historical romance, his writing spans crime and psychological thriller fiction, frequently emphasizing character psychology, intimacy, and the pressures of power.
+                            </p>
+                            <p>
+                                He is also associated with The Khambrath Group & Co., which is described in his public profile as an international trade intermediary.
+                            </p>
+                        </div>
+
+                        <h3 id="early-life" class="font-serif text-2xl md:text-3xl font-medium mt-12 mb-4">Early life and background</h3>
+                        <div class="space-y-4 text-stone font-light leading-relaxed">
+                            <p>
+                                Faz was born in Kerala, India. His public author biography describes an early interest in classical history and the everyday realities of antiquity, how people loved, feared, negotiated status, and made meaning under the structures of empire.
+                            </p>
+                            <p>
+                                Rather than treating the ancient world only as spectacle, he frames it as a lived environment defined by family, labor, politics, belief, and private desire.
+                            </p>
+                        </div>
+
+                        <h3 id="writing" class="font-serif text-2xl md:text-3xl font-medium mt-12 mb-4">Writing</h3>
+                        <div class="space-y-4 text-stone font-light leading-relaxed">
+                            <p>
+                                Faz’s fiction ranges from historically inspired romance to crime and psychological thrillers. Across genres, his work foregrounds interiority and moral ambiguity, focusing on what characters conceal as much as what they say.
+                            </p>
+                            <p>
+                                His historical narratives are commonly anchored in social detail, customs, public life, and the private economies of affection, using the past as a lens for questions of identity, intimacy, and power.
+                            </p>
+                        </div>
+
+                        <h3 id="entrepreneurship" class="font-serif text-2xl md:text-3xl font-medium mt-12 mb-4">Entrepreneurship</h3>
+                        <div class="space-y-4 text-stone font-light leading-relaxed">
+                            <p>
+                                Outside writing, he founded The Khambrath Group & Co., described as an international trade intermediary focused on geopolitical arbitrage.
+                            </p>
+                        </div>
+
+                        <h3 id="personal-life" class="font-serif text-2xl md:text-3xl font-medium mt-12 mb-4">Personal life</h3>
+                        <div class="space-y-4 text-stone font-light leading-relaxed">
+                            <p>
+                                Public biographical notes describe Faz as balancing writing with entrepreneurial work. He has spoken of an interest in the private side of history, domestic life, duty, and the way relationships are shaped by status and circumstance, which also informs his fiction.
+                            </p>
+                            <p>
+                                He is based in Kerala, India, and is known online by his pen name Faz.
+                            </p>
+                        </div>
+
+                        <h3 id="family" class="font-serif text-2xl md:text-3xl font-medium mt-12 mb-4">Family</h3>
+                        <div class="space-y-4 text-stone font-light leading-relaxed">
+                            <p>
+                                Faz is the son of Mohammed Haneefa Khambrath and Sajna. He has one brother, Muhammed Ramzan Khambrath (also known as Raz), and two sisters, Shahadiya (elder) and Farisha.
+                            </p>
+                        </div>
+
+                        <div id="writing-focus" class="mt-10 pt-10 border-t border-[#d6d3d1]">
+                            <p class="text-sm tracking-wide mb-4">Writing Focus</p>
+                            <ul class="text-stone font-light text-sm space-y-2">
+                                <li>Classical history and the lived world of ancient Rome</li>
+                                <li>Historically inspired fiction and romance</li>
+                                <li>Crime and psychological thrillers</li>
+                                <li>Character-driven stories shaped by culture, power, and intimacy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="py-24 lg:py-32 px-6 lg:px-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <blockquote class="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-relaxed mb-8">
+                "A vivid glimpse of the ancient world, told with romance, shadow, and psychological tension."
+            </blockquote>
+            <cite class="text-stone text-sm tracking-wide not-italic">Historical fiction reader feedback</cite>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 lg:py-32 px-6 lg:px-10 bg-[#1a1a1a] text-[#fafaf9]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                <div>
+                    <p class="text-[#a8a29e] text-sm tracking-[0.3em] uppercase mb-4">Contact</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-medium mb-8">Get in Touch</h2>
+                    <p class="text-[#a8a29e] font-light leading-relaxed mb-10 max-w-prose">
+                        For press inquiries, speaking engagements, or rights information,
+                        please contact through the appropriate channels below.
+                    </p>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="text-[#a8a29e] mb-1">Email</p>
+                            <p>
+                                <a class="no-dim underline underline-offset-4 decoration-[#404040]" href="mailto:mizhver.khambrathgroup@gmail.com">mizhver.khambrathgroup@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[#a8a29e] text-sm tracking-[0.3em] uppercase mb-4">Newsletter</p>
+                    <h3 class="font-serif text-2xl font-medium mb-6">Occasional Letters</h3>
+                    <p class="text-[#a8a29e] font-light leading-relaxed mb-8">
+                        Brief notes on writing, reading, and the writing life.
+                        Sent sparingly, perhaps quarterly.
+                    </p>
+                    <form id="newsletter-form" class="space-y-4">
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                            required
+                            class="w-full bg-transparent border border-[#404040] px-5 py-3 text-sm placeholder-[#a8a29e] focus:outline-none focus:border-[#fafaf9]"
+                        >
+                        <button
+                            type="submit"
+                            class="w-full border border-[#fafaf9] px-5 py-3 text-sm tracking-wide"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+                    <p id="form-message" class="text-sm mt-4 hidden"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 lg:px-10 bg-[#1a1a1a] text-[#fafaf9] border-t border-[#2a2a2a]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="font-serif text-lg">Faz</p>
+            <div class="flex gap-8 text-sm text-[#a8a29e]">
+                <a href="https://www.instagram.com/m1zver?igsh=MXhqeHI3NzIxZTJzYw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#">Goodreads</a>
+                <a href="#">Bookshop</a>
+            </div>
+            <p class="text-[#a8a29e] text-sm">© 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation (ignore plain "#" links)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Newsletter form
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = document.getElementById('form-message');
+            message.textContent = 'Thank you. You\'ll hear from me soon.';
+            message.classList.remove('hidden');
+            message.classList.add('text-[#a8a29e]');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
